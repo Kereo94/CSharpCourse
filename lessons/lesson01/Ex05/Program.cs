@@ -1,4 +1,5 @@
-﻿Console.Write("Введите Ваше имя: ");
+﻿// Особое действие на ввод слова Маша
+Console.Write("Введите Ваше имя: ");
 string username = Console.ReadLine();
 
 if(username.ToLower() == "маша")
