@@ -1,17 +1,25 @@
-﻿//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-//645 -> 5
-//78 -> третьей цифры нет
-//32679 -> 6
+﻿/*
+Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+645 -> 5
+78 -> третьей цифры нет
+32679 -> 6
+*/
 
+Console.Write("Введите число: ");
+int thirdDigit = Convert.ToInt32(Console.ReadLine());
+int digitA = 0;
 
-Console.Write("Напишите любое число: ");
-int threeNumber = Convert.ToInt32(Console.ReadLine());
-string threeNumberText = Convert.ToString(threeNumber);
-if (threeNumberText.Length > 2)
+if (thirdDigit < 100)
 {
-    Console.WriteLine("третья цифра этого числа - " + threeNumberText[2]);
+    Console.Write("Третьей цифры нет");
 }
-else
+if (thirdDigit > 100)
 {
-    Console.WriteLine("третьей цифры нет");
+    while (thirdDigit >= 1000)
+    {
+        thirdDigit = thirdDigit / 10;
+    }
+    digitA = thirdDigit % 10;
+
+    Console.Write($"Третья цифра числа - {digitA}");
 }

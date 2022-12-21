@@ -1,21 +1,22 @@
-﻿//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-//6 -> да
-//7 -> да
-//1 -> нет
+﻿/*
+Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+6 -> да
+7 -> да
+1 -> нет
+*/
 
-Console.Write("Введите цифру, обозначающию день недели: ");
-int dayNumber = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число от 1 до 7: ");
+int DayNumber = Convert.ToInt32(Console.ReadLine());
 
-void CheckingDay(int dayNumber)
+if(DayNumber == 6 || DayNumber == 7)
 {
-    if(dayNumber == 6 || dayNumber == 7)
-    {
-        Console.WriteLine("Этот день выходной - да");
-    }
-    else if(dayNumber < 1 || dayNumber > 7) 
-    {
-        Console.WriteLine("не соответствует требованиям");
-    }
-    else Console.WriteLine("Этот день не выходной - нет");
+    Console.Write("Является выходным - да");
+} 
+else if(DayNumber < 1 || DayNumber > 7)
+{
+    Console.Write("Введено некорректное значение");
 }
-CheckingDay(dayNumber);
+else
+{
+    Console.Write("Не является выходным - нет");
+}
