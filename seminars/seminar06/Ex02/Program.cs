@@ -12,6 +12,13 @@ double k1 = double.Parse(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 double k2 = double.Parse(Console.ReadLine());
 
-double x = (-b2 + b1)/(-k1 + k2);
-double y = k2 * x + b2;
-Console.WriteLine($"Две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
+if (k1 == k2)
+{
+    Console.Write("Некорретные даннные. K1 и k2 не должны быть одинаковыми.");
+}
+else
+{
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k2 * x + b2;
+    Console.WriteLine($"Две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
+}
