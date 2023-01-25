@@ -12,7 +12,7 @@ int index = a;
 
 for (int i = 1; i < b; i++)
 {
-    index = index * a;
+    index *= a;
 }
 
 Console.Write($"При возведении числа {a} в степень {b} получается: {index}");

@@ -5,22 +5,17 @@
 
 Console.Write("Введите целое число от 2: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int a = 1;
-int index = 1;           
-if (number < 2)
-	{
-		Console.WriteLine("Введено некорректное число. Введите корректиное значиение");
-	}
-while(true)
+int i = 1;
+
+while (i <= number)
 {
-	if (a % 2 == 0)
+	if (number < 2)
 	{
-		Console.WriteLine(a);
-		index = index + 2;
+		Console.WriteLine("Введено некорректное число. Введите корректиное значение");
 	}
-	if (index >= number)
+	if (i % 2 == 0)
 	{
-		break;
+		Console.Write(i + " ");
 	}
-a ++;
+	i++;
 }

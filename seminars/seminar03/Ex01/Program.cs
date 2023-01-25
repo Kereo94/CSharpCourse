@@ -5,7 +5,7 @@
 //СТРОКИ ИСПОЛЬЗОВАТЬ НЕЛЬЗЯ
 
 Console.Write("Введите пятизначное число: ");
-int Number = Convert.ToInt32(Console.ReadLine());
+int Number = int.Parse(Console.ReadLine());
 int n = Number;
 int revers = 0;
 while (Convert.ToBoolean(Number))
